@@ -9,6 +9,8 @@ bool Jedi::comp_rank(const Jedi *jedi1,const Jedi *jedi2)
 {
     if(jedi1->rank.getRankNum() < jedi2->rank.getRankNum())
         return true;
+    if (jedi1->rank.getRankNum() > jedi2->rank.getRankNum())
+        return false;
     if( jedi1->rank.getRankNum() == jedi2->rank.getRankNum() )
         return jedi1->name < jedi2->name;
 }
